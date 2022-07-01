@@ -24,6 +24,15 @@ def get_user_text(message):
     if message.text == 'time':
         b = str(date_time())
         bot.send_message(message.chat.id,b,parse_mode = 'html')
+    if message.text == 'Привет!':
+        b = str(date_time())
+        bot.send_message(message.chat.id,'Привет мой друг!',parse_mode = 'html')
+    if message.text == 'Как дела?':
+        b = str(date_time())
+        bot.send_message(message.chat.id,'Все норм!!',parse_mode = 'html')
+
+
+
 
 
 
