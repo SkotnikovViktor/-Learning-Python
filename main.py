@@ -24,13 +24,17 @@ def get_user_text(message):
     if message.text == 'time':
         b = str(date_time())
         bot.send_message(message.chat.id,b,parse_mode = 'html')
-    elif message.text == 'Привет!':
+    elif message.text == 'Привет!' or 'привет' or 'привет!' or 'Привет':
         bot.send_message(message.chat.id,'Привет мой друг!',parse_mode = 'html')
-    elif message.text == 'Как дела?':
+    elif message.text == 'Как дела?' or 'как дела?' or 'Как дела' or 'как дела?':
         bot.send_message(message.chat.id,'Все норм!!',parse_mode = 'html')
-    elif message.text == 'Время?':
+    elif message.text == 'Время?' or 'Время' or 'время?' or 'время':
         b = str(date_time())
         bot.send_message(message.chat.id,'Время по МСК '+b,parse_mode = 'html')
+    elif message.text == 'Как тебя зовут?':
+        bot.send_message(message.chat.id,'BotOnPythonBot',parse_mode = 'html')
+
+    
     else:
         bot.send_message(message.chat.id,'Упс я вас не понял(, напишите еще раз текст может я пойму)',parse_mode = 'html')
         
