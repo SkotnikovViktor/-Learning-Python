@@ -24,11 +24,11 @@ def get_user_text(message):
     if message.text == 'time':
         b = str(date_time())
         bot.send_message(message.chat.id,b,parse_mode = 'html')
-    if message.text == 'Привет!':
+    elif message.text == 'Привет!':
         bot.send_message(message.chat.id,'Привет мой друг!',parse_mode = 'html')
-    if message.text == 'Как дела?':
+    elif message.text == 'Как дела?':
         bot.send_message(message.chat.id,'Все норм!!',parse_mode = 'html')
-    if message.text == 'Время?':
+    elif message.text == 'Время?':
         b = str(date_time())
         bot.send_message(message.chat.id,'Время по МСК '+b,parse_mode = 'html')
     else:
