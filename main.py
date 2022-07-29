@@ -31,12 +31,9 @@ def get_user_text(message):
         bot.send_message(message.chat.id, 'BotOnPython!')
     elif message.text == 'Калькулятор!':
         bot.send_message(message.chat.id,'Выберите сложение, вычитание, умножение или деление')
-    elif message.text == 'Сложение':
-        bot.send_message(message.chat.id,'Напишите числа!')
-        if message.text == "5": 
-            bot.send_message(message.chat.id,'5')
-        elif message.text == "5":
-            bot.send_message(message.chat.id,'5')
+    else:
+        bot.send_message(message.chat.id,'Опа, а вот это уже не понятно!')
+
             
 # Запуск бота
 bot.polling(none_stop = True)
