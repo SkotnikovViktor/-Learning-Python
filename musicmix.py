@@ -8,4 +8,8 @@ def music():
     a = random.choice(c)
     pygame.mixer.music.load(a)
     pygame.mixer.music.play(0)
+    while True:
+        pygame.time.delay(100)
+
+
 music()
