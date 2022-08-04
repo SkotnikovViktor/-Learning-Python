@@ -11,5 +11,5 @@ def music():
     while True:
         pygame.time.delay(100)
 
-
+#привет Виктор)
 music()
