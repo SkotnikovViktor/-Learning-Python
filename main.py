@@ -42,8 +42,13 @@ def get_user_text(message):
     elif message.text == "/help":
         bot.send_message(message.chat.id,'Я буду рад вам помочь!)')
     elif message.text == "Фото":
-        bot.send_message(message.chat.id,'Обратный отсчет 3....2....1...')
-        time.sleep(3)
+        bot.send_message(message.chat.id,'Обратный отсчет')
+        bot.send_message(message.chat.id,'3')
+        time.sleep(1)
+        bot.send_message(message.chat.id,'2')
+        time.sleep(1)
+        bot.send_message(message.chat.id,'1')
+        time.sleep(1)
         cinema()
         bot.send_message(message.chat.id,'Фото сделано')
 
@@ -52,5 +57,7 @@ def get_user_text(message):
 
 # Создание вечного цикла
 # Запуск бота
+# АААААААААААААА ошибка в git!
+# АААААААААААААА ошибка в git!
 bot.polling(none_stop = True)
 
