@@ -9,11 +9,6 @@ bot = telebot.TeleBot('5505530308:AAGoiiUP5dD6GP6eM_3b5AfHJQrVdDXFXQI')
 
 
 
-def cinema():
-    cap = cv2.VideoCapture(0)
-    ret,frame = cap.read()
-    cv2.imwrite('cinemabot.png',frame )
-    cap.release()
 
 # Создание кнопки в чате [start] + вложенная функция
 @bot.message_handler(commands = ['start'])
