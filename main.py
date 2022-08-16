@@ -3,12 +3,14 @@
 import telebot
 import json
 import time
+from key import key_bot_main
 # Создание переменной с токеном
-bot = telebot.TeleBot('5505530308:AAGoiiUP5dD6GP6eM_3b5AfHJQrVdDXFXQI')
+
+with open('file.json','r') as file:
+    save_file_main = json.load(file)
 
 
-
-
+bot = telebot.TeleBot(key_bot_main)
 
 # Создание кнопки в чате [start] + вложенная функция
 @bot.message_handler(commands = ['start'])
@@ -25,7 +27,7 @@ def get_user_text(message):
     elif message.text == 'Как дела?':
         bot.send_message(message.chat.id,'Нормально')
     elif message.text == 'Steam':
-        bot.send_message(message.chat.id,a)
+        bot.send_message(message.chat.id,save_file_main )
     elif message.text == 'Hello':
         bot.send_message(message.chat.id,'Нi!')
     elif message.text == 'Name?':
@@ -49,7 +51,5 @@ def get_user_text(message):
 
 # Создание вечного цикла
 # Запуск бота
-# АААААААААААААА ошибка в git!
-# АААААААААААААА ошибка в git!
 bot.polling(none_stop = True)
 
