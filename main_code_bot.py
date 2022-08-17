@@ -6,7 +6,7 @@ import time
 from main_bot_token import key_bot_main
 # Создание переменной с токеном
 
-with open('main_file_json','r') as file:
+with open('main_file_json.json','r') as file:
     save_file_main = json.load(file)
 
 
