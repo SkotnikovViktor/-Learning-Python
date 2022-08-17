@@ -3,10 +3,10 @@
 import telebot
 import json
 import time
-from key import key_bot_main
+from main_bot_token import key_bot_main
 # Создание переменной с токеном
 
-with open('file.json','r') as file:
+with open('main_file_json','r') as file:
     save_file_main = json.load(file)
 
 
