@@ -1,6 +1,6 @@
+# Импорт библиотеки json
 import json
-import pprint
-
+# Открытие файла
 with open('file.json', 'r') as f:
+    # Сохранение в переменную
     json_data = json.load(f)
-    pprint(json_data)
