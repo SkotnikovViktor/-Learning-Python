@@ -1,1 +1,8 @@
-{"asd":true,"qwe":[123,true,{"close":"test1","close2":"test2"}]}
+{
+	"asd": true,
+	"qwe": [123, true,
+	{
+		"close": "test1",
+		"close2": "test2"
+	}]
+}
