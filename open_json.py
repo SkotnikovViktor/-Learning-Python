@@ -4,5 +4,5 @@ import json
 with open('file.json', 'r') as f:
     # Сохранение в переменную
     json_data = json.load(f)
-# Первый пробный код (не работает)
-print(json_data)
+for one,two in json_data.items():
+    print(one,':',two)
