@@ -5,6 +5,7 @@ with open('file.json', 'r') as file:
     # Сохранение файла в переменную
     json_data = json.load(file)
     # Цикл for
-for one,two in json_data.items():
-    print(one,':',two,',')
+for i in json_data:
+    if i in "asd":
+        print('Yes')
 
