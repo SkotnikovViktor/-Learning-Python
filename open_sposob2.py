@@ -1,11 +1,22 @@
 # Импорт библиотеки json
 import json
+
 # Открытие файла для запись в переменную
-with open('file.json', 'r') as file:
+with open('Sposob2.json', 'r') as file:
     # Сохранение файла в переменную
     json_data = json.load(file)
-    # Цикл for
+
+json_data = str(json_data)
+print(type(json_data), json_data)
+
+json = ''
+
+# Цикл for
 for i in json_data:
-    if i in "asd":
-        print('Yes')
+    json += i
+print(json)
+
+
+
+
 
