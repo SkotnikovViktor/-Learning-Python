@@ -1,4 +1,4 @@
-# Начало работы
+ Начало работы
 # Импорт библиотеки telebot и time
 import telebot
 import json
@@ -45,6 +45,8 @@ def get_user_text(message):
         bot.send_message(message.chat.id,'1')
         time.sleep(1)
         bot.send_message(message.chat.id,'Фото сделано')
+    elif message.text == 'Ты работаешь?':
+        bot.send_message(message.chat.id, 'Да я работаю, и постараюсь обработать ваши работы')
 
     else:
         bot.send_message(message.chat.id,'Опа, а вот это уже не понятно!')
