@@ -15,13 +15,17 @@ json = ''
 for i in json_data:
     json += i
     
-    if json == '{':
-        skobka = '{'
+    if json == "{":
+        skobka = "{"
         print('',skobka)
-    elif json == "'":
-        kov = "'"
-        print('     ',kov)
-        
+        if json == '"':
+            kov = '"'
+            print('',kov)
+        else:
+            print('No ')
+    
+
+
 
 
 
