@@ -1,4 +1,4 @@
- Начало работы
+
 # Импорт библиотеки telebot и time
 import telebot
 import json
