@@ -18,8 +18,7 @@ for i in json_data:
 
     
     if i == '{':
-        json += i + '/n'
-
+        json = json + i + '\n'
 
 
 print(json)
