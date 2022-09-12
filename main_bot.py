@@ -3,10 +3,11 @@
 import telebot
 import json
 import time
-from main_bot_token import key_bot_main
+from token_bot import key_bot_main
+from telebot import *
 # Создание переменной с токеном
 
-with open('main_file_json.json','r') as file:
+with open('steam.json','r') as file:
     save_file_main = json.load(file)
 
 

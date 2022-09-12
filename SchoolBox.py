@@ -9,8 +9,7 @@ pygame.mixer.init()
 window = tk.Tk()
 window.geometry('3300x1200')
 window.title('SchoolBox ')
-#pygame.mixer.music.load('spok.mp3')
-#pygame.mixer.music.play()
+
 
 
 
