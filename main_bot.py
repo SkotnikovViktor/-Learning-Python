@@ -6,12 +6,19 @@ import time
 from token_bot import key_bot_main
 from telebot import *
 
+selfing = False
 
 # Открытие файла stem.json
 with open('steam.json','r') as file:
     # Запсиь в переменную файл steam.json
     save_file_main = json.load(file)
 
+
+# Создание функции
+def  save_file():
+
+    with open('Myday.txt','a') as myday:
+        myday.write()
 
 
 # Указываю боту от кула надо брать токен
@@ -34,6 +41,7 @@ def start(message):
 @bot.message_handler()
 # Функция по обработке сообщений ползователя
 def get_user_text(message):
+    global  selfing,save_file
     if message.text == 'Привет!':
         bot.send_message(message.chat.id,'Привет мой друг!')
 
@@ -71,9 +79,16 @@ def get_user_text(message):
     elif message.text == 'Ты работаешь?':
 
         bot.send_message(message.chat.id, 'Да я работаю, и постараюсь обработать ваши работы')
+    elif message.text == 'Запись в файл':
+        bot.send_message(message.chat.id,'Жду!')
+        selfing = True
 
     else:
-        bot.send_message(message.chat.id,'Опа, а вот это уже не понятно!')
+        if selfing == False:
+            bot.send_message(message.chat.id,'Опа, а вот это уже не понятно!')
+        else:
+            save_file
+            bot.send_message(message.chat.id,'Записал в файл)')
 
 
 # Создание вечного цикла что-бы бот не заканчивал работу
