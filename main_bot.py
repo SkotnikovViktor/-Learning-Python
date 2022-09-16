@@ -15,10 +15,18 @@ with open('steam.json','r') as file:
 
 
 # Создание функции
-def  save_file():
 
-    with open('Myday.txt','a') as myday:
-        myday.write()
+def  save_file():
+    text = "myday: happy"
+    fp = open('myday.txt', 'a')
+    fp.write(text)
+    fp.close()
+
+
+
+
+
+
 
 
 # Указываю боту от кула надо брать токен
@@ -63,6 +71,11 @@ def get_user_text(message):
     elif message.text == "/help":
         bot.send_message(message.chat.id,'Я буду рад вам помочь!)')
 
+    elif message.text == "Вывод файла":
+            res = open('myday.txt','r')
+            bot.send_message(message.chat.id,res.read())
+            res.close()
+
     elif message.text == "Фото":
         bot.send_message(message.chat.id,'Обратный отсчет')
 
@@ -78,19 +91,23 @@ def get_user_text(message):
         bot.send_message(message.chat.id,'Фото сделано')
     elif message.text == 'Ты работаешь?':
 
+
         bot.send_message(message.chat.id, 'Да я работаю, и постараюсь обработать ваши работы')
     elif message.text == 'Запись в файл':
         bot.send_message(message.chat.id,'Жду!')
-        selfing = True
+        trir = open('myday.txt','a')
+        tri = message.text == ''
+        trir.write(tri)
 
     else:
-        if selfing == False:
-            bot.send_message(message.chat.id,'Опа, а вот это уже не понятно!')
-        else:
-            save_file
-            bot.send_message(message.chat.id,'Записал в файл)')
+        bot.send_message(message.chat.id,'Не понял)')
+
+
 
 
 # Создание вечного цикла что-бы бот не заканчивал работу
 bot.polling(none_stop = True)
+
+
+
 
