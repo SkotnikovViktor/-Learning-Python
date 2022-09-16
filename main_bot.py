@@ -75,7 +75,7 @@ def get_user_text(message):
             res = open('myday.txt','r')
             bot.send_message(message.chat.id,res.read())
             res.close()
-
+#
     elif message.text == "Фото":
         bot.send_message(message.chat.id,'Обратный отсчет')
 
