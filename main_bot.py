@@ -1,4 +1,3 @@
-
 # Импорт библиотек для работы
 import telebot
 import json
@@ -71,11 +70,7 @@ def get_user_text(message):
     elif message.text == "/help":
         bot.send_message(message.chat.id,'Я буду рад вам помочь!)')
 
-    elif message.text == "Вывод файла":
-            res = open('myday.txt','r')
-            bot.send_message(message.chat.id,res.read())
-            res.close()
-#
+
     elif message.text == "Фото":
         bot.send_message(message.chat.id,'Обратный отсчет')
 
@@ -90,17 +85,12 @@ def get_user_text(message):
 
         bot.send_message(message.chat.id,'Фото сделано')
     elif message.text == 'Ты работаешь?':
-
-
         bot.send_message(message.chat.id, 'Да я работаю, и постараюсь обработать ваши работы')
-    elif message.text == 'Запись в файл':
-        bot.send_message(message.chat.id,'Жду!')
-        trir = open('myday.txt','a')
-        tri = message.text == ''
-        trir.write(tri)
-
+    elif message.text == "Ты вернулся?":
+        bot.send_message(message.chat.id, 'Да... я вернулся и готов зажигать!')
     else:
         bot.send_message(message.chat.id,'Не понял)')
+
 
 
 
