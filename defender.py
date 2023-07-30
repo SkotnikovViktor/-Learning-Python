@@ -1,0 +1,6 @@
+falsing_false = open(r'C:/Users/Public/ControlePaps/false.txt','w')
+falsing_false.write('0')
+falsing_false.close()
+def_token = open(r'C:/Users/Public/ControlePaps/token.txt','w')
+def_token.write('')
+def_token.close()
